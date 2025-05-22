@@ -1,0 +1,29 @@
+    <!DOCTYPE html>
+    <html lang="en"
+          xmlns:th="http://www.thymleaf.org"
+    >
+    <head>
+        <meta charset="UTF-8">
+        <title>view Products</title>
+    </head>
+    <body>
+    <h1>PRODUCT LIST</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <td>PRODUCT NAME</td>
+            <td>PRODUCT PRICE</td>
+            <td>PRODUCT CATEGORY</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="products:${displayall}">
+            <td th:text="${products.ProductName}"></td>
+            <td th:text="${products.ProductPrice}"></td>
+            <td th:text="${products.Productcategory}"></td>
+        </tr>
+
+        </tbody>
+    </table>
+    </body>
+    </html>
